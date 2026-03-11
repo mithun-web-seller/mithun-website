@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Smart School | Premium Management System</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fa-solid fa-graduation-cap"></i> Future<span>Smart</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#facilities">Facilities</a></li>
+                <li><a href="#admission">Admission</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button class="btn-glow" onclick="toggleLoginModal()">Login</button></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg-animation"></div>
+        <div class="container hero-content">
+            <div class="hero-text fade-in">
+                <h1>Future <span class="gradient-text">Smart School</span></h1>
+                <p>Experience the next generation of Digital Education. A complete ecosystem for Students, Teachers, and Administrators.</p>
+                <div class="hero-btns">
+                    <a href="#admission" class="btn-primary">Apply Now</a>
+                    <button class="btn-secondary" onclick="scrollToDashboards()">View System Demo <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="hero-visual fade-in">
+                <div class="glass-card floating-card">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h3>98% Success Rate</h3>
+                </div>
+                <div class="glass-card floating-card delay-1">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h3>100% Digital</h3>
+                </div>
+                <div class="glass-card floating-card delay-2">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    <h3>5000+ Students</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notice Board -->
+    <div class="notice-bar">
+        <div class="container">
+            <div class="notice-icon"><i class="fa-solid fa-bullhorn"></i></div>
+            <div class="notice-content">
+                <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+                    <span>📢 Admissions Open for 2024-25 | 📅 Annual Sports Day on 15th Dec | 📝 Mid-Term Exam Schedule Released</span>
+                </marquee>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Our School</h2>
+                <div class="line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-card glass-card">
+                    <i class="fa-solid fa-bullseye"></i>
+                    <h3>Our Mission</h3>
+                    <p>To empower students with digital literacy and traditional values, creating future-ready leaders.</p>
+                </div>
+                <div class="about-card glass-card">
+                    <i class="fa-solid fa-eye"></i>
+                    <h3>Our Vision</h3>
+                    <p>To be a global benchmark in smart education, integrating technology seamlessly into learning.</p>
+                </div>
+                <div class="about-card glass-card">
+                    <i class="fa-solid fa-user-tie"></i>
+                    <h3>Principal's Message</h3>
+                    <p>"Welcome to a place where innovation meets education. Our system ensures transparency and growth."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities" class="section bg-darker">
+        <div class="container">
+            <div class="section-header">
+                <h2>Smart Facilities</h2>
+                <div class="line"></div>
+            </div>
+            <div class="facilities-grid">
+                <div class="facility-card glass-card">
+                    <div class="icon-box"><i class="fa-solid fa-chalkboard-user"></i></div>
+                    <h3>Smart Classrooms</h3>
+                    <p>Interactive whiteboards and digital learning tools.</p>
+                </div>
+                <div class="facility-card glass-card">
+                    <div class="icon-box"><i class="fa-solid fa-flask"></i></div>
+                    <h3>Science Labs</h3>
+                    <p>State-of-the-art physics, chemistry, and biology labs.</p>
+                </div>
+                <div class="facility-card glass-card">
+                    <div class="icon-box"><i class="fa-solid fa-book-open"></i></div>
+                    <h3>Digital Library</h3>
+                    <p>Access to millions of e-books and research papers.</p>
+                </div>
+                <div class="facility-card glass-card">
+                    <div class="icon-box"><i class="fa-solid fa-bus"></i></div>
+                    <h3>GPS Transport</h3>
+                    <p>Real-time tracking for student safety.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teachers Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Expert Faculty</h2>
+                <div class="line"></div>
+            </div>
+            <div class="teachers-grid">
+                <div class="teacher-card glass-card">
+                    <div class="t-img"><i class="fa-solid fa-user"></i></div>
+                    <h3>Dr. Sarah Jenkins</h3>
+                    <p>Principal</p>
+                </div>
+                <div class="teacher-card glass-card">
+                    <div class="t-img"><i class="fa-solid fa-user"></i></div>
+                    <h3>Mr. Alan Grant</h3>
+                    <p>Physics</p>
+                </div>
+                <div class="teacher-card glass-card">
+                    <div class="t-img"><i class="fa-solid fa-user"></i></div>
+                    <h3>Ms. Ellie Sattler</h3>
+                    <p>Biology</p>
+                </div>
+                <div class="teacher-card glass-card">
+                    <div class="t-img"><i class="fa-solid fa-user"></i></div>
+                    <h3>Mr. Ian Malcolm</h3>
+                    <p>Mathematics</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section bg-darker">
+        <div class="container">
+            <div class="section-header">
+                <h2>Campus Life</h2>
+                <div class="line"></div>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item"><i class="fa-solid fa-camera"></i></div>
+                <div class="gallery-item"><i class="fa-solid fa-camera"></i></div>
+                <div class="gallery-item"><i class="fa-solid fa-camera"></i></div>
+                <div class="gallery-item"><i class="fa-solid fa-camera"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SYSTEM DASHBOARD DEMO SECTION (Interactive) -->
+    <section id="dashboards" class="section demo-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>System Interface Demo</h2>
+                <p>Click the buttons below to toggle between different user roles.</p>
+                <div class="demo-controls">
+                    <button class="demo-btn active" onclick="showDashboard('student')">Student Portal</button>
+                    <button class="demo-btn" onclick="showDashboard('teacher')">Teacher Portal</button>
+                    <button class="demo-btn" onclick="showDashboard('admin')">Admin Panel</button>
+                </div>
+            </div>
+
+            <!-- Student Dashboard UI -->
+            <div id="student-dashboard" class="dashboard-container glass-card">
+                <div class="dash-sidebar">
+                    <div class="dash-logo">Student Portal</div>
+                    <ul>
+                        <li class="active"><i class="fa-solid fa-house"></i> Dashboard</li>
+                        <li><i class="fa-solid fa-calendar-days"></i> Timetable</li>
+                        <li><i class="fa-solid fa-book"></i> Homework</li>
+                        <li><i class="fa-solid fa-clipboard-check"></i> Attendance</li>
+                        <li><i class="fa-solid fa-file-invoice-dollar"></i> Fee Status</li>
+                    </ul>
+                </div>
+                <div class="dash-content">
+                    <div class="dash-header">
+                        <h3>Welcome, John Doe</h3>
+                        <span>Class: 10-A</span>
+                    </div>
+                    <div class="dash-stats">
+                        <div class="stat-card">
+                            <h4>Attendance</h4>
+                            <p class="green">92%</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Next Exam</h4>
+                            <p>Mathematics</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Assignments</h4>
+                            <p>3 Pending</p>
+                        </div>
+                    </div>
+                    <div class="dash-table">
+                        <h4>Recent Results</h4>
+                        <table>
+                            <tr><th>Subject</th><th>Marks</th><th>Grade</th></tr>
+                            <tr><td>Mathematics</td><td>95/100</td><td>A+</td></tr>
+                            <tr><td>Science</td><td>88/100</td><td>A</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teacher Dashboard UI -->
+            <div id="teacher-dashboard" class="dashboard-container glass-card hidden">
+                <div class="dash-sidebar">
+                    <div class="dash-logo">Teacher Portal</div>
+                    <ul>
+                        <li class="active"><i class="fa-solid fa-chalkboard-user"></i> Dashboard</li>
+                        <li><i class="fa-solid fa-user-plus"></i> Student List</li>
+                        <li><i class="fa-solid fa-pen-to-square"></i> Upload Marks</li>
+                        <li><i class="fa-solid fa-clipboard-list"></i> Attendance</li>
+                        <li><i class="fa-solid fa-file-pdf"></i> Assignments</li>
+                    </ul>
+                </div>
+                <div class="dash-content">
+                    <div class="dash-header">
+                        <h3>Mr. Alan Grant</h3>
+                        <span>Department: Science</span>
+                    </div>
+                    <div class="dash-actions">
+                        <button class="btn-glow-small">Upload Homework</button>
+                        <button class="btn-glow-small">Take Attendance</button>
+                        <button class="btn-glow-small">Post Notice</button>
+                    </div>
+                    <div class="dash-table">
+                        <h4>Class 10-A (Physics)</h4>
+                        <table>
+                            <tr><th>Student</th><th>Present</th><th>Action</th></tr>
+                            <tr><td>John Doe</td><td><i class="fa-solid fa-check green"></i></td><td><i class="fa-solid fa-pen"></i></td></tr>
+                            <tr><td>Jane Smith</td><td><i class="fa-solid fa-xmark red"></i></td><td><i class="fa-solid fa-pen"></i></td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Admin Dashboard UI -->
+            <div id="admin-dashboard" class="dashboard-container glass-card hidden">
+                <div class="dash-sidebar">
+                    <div class="dash-logo">Admin Panel</div>
+                    <ul>
+                        <li class="active">

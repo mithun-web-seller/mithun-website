@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Medicare Hospital</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI;
+}
+
+/* ANIMATED BACKGROUND */
+
+body{
+background:linear-gradient(120deg,#e3f2fd,#bbdefb,#e1f5fe);
+background-size:400% 400%;
+animation:bgMove 15s infinite alternate;
+color:#333;
+}
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+100%{background-position:100% 50%;}
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 60px;
+background:white;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+color:#0077ff;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+}
+
+/* HERO */
+
+.hero{
+height:80vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:
+linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+url("https://images.unsplash.com/photo-1579684385127-1ef15d508118");
+background-size:cover;
+color:white;
+}
+
+.hero h1{
+font-size:55px;
+margin-bottom:15px;
+}
+
+/* BUTTON */
+
+.btn{
+padding:10px 22px;
+border:none;
+background:#0077ff;
+color:white;
+border-radius:6px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.btn:hover{
+box-shadow:0 0 15px #0077ff;
+}
+
+/* SECTION */
+
+.section{
+padding:80px 10%;
+text-align:center;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:35px;
+}
+
+/* GLOWING CARDS */
+
+.card,.doctor,.review{
+
+background:rgba(255,255,255,0.75);
+backdrop-filter:blur(10px);
+
+padding:28px;
+border-radius:15px;
+
+border:1px solid rgba(255,255,255,0.4);
+
+box-shadow:
+0 10px 30px rgba(0,0,0,0.08),
+0 0 10px rgba(0,119,255,0.15);
+
+transition:all 0.35s ease;
+}
+
+.card:hover,
+.doctor:hover,
+.review:hover{
+
+transform:translateY(-8px) scale(1.02);
+
+box-shadow:
+0 20px 45px rgba(0,0,0,0.15),
+0 0 25px rgba(0,119,255,0.6),
+0 0 45px rgba(0,119,255,0.4);
+
+}
+
+/* DOCTOR IMAGE */
+
+.doctor img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:12px;
+margin-bottom:12px;
+transition:0.4s;
+}
+
+.doctor:hover img{
+transform:scale(1.05);
+}
+
+/* POPUP FORM */
+
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+justify-content:center;
+align-items:center;
+}
+
+.popup-content{
+background:white;
+padding:30px;
+border-radius:10px;
+width:300px;
+}
+
+.popup input{
+width:100%;
+padding:10px;
+margin:8px 0;
+}
+
+/* DASHBOARD */
+
+.dashboard{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+justify-content:center;
+align-items:center;
+}
+
+.dashboard-box{
+background:white;
+padding:30px;
+border-radius:10px;
+width:400px;
+}
+
+/* AMBULANCE BUTTON */
+
+.ambulance{
+position:fixed;
+bottom:25px;
+right:25px;
+background:red;
+color:white;
+padding:15px 18px;
+border-radius:50px;
+font-weight:bold;
+cursor:pointer;
+box-shadow:0 0 15px red;
+}
+
+/* FOOTER */
+
+footer{
+background:#0d2c54;
+color:white;
+padding:30px;
+text-align:center;
+margin-top:50px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">Medicare</div>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#dept">Departments</a></li>
+<li><a href="#doc">Doctors</a></li>
+<li><a href="#" onclick="openDashboard()">Patient Dashboard</a></li>
+</ul>
+
+</nav>
+
+<div class="hero">
+
+<div>
+
+<h1>Advanced Healthcare</h1>
+
+<p>Modern hospital with expert doctors</p>
+
+<button class="btn" onclick="openForm()">Book Appointment</button>
+
+</div>
+
+</div>
+
+<section class="section" id="dept">
+
+<h2>Departments</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Cardiology</h3>
+<p>Heart treatment specialists</p>
+</div>
+
+<div class="card">
+<h3>Neurology</h3>
+<p>Brain and nerve experts</p>
+</div>
+
+<div class="card">
+<h3>Orthopedics</h3>
+<p>Bone and joint treatment</p>
+</div>
+
+<div class="card">
+<h3>Pediatrics</h3>
+<p>Child healthcare</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="doc">
+
+<h2>Our Doctors</h2>
+
+<div class="cards">
+
+<div class="doctor">
+
+<img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7">
+
+<h3>Dr John Smith</h3>
+
+<p>Cardiologist</p>
+
+<button class="btn" onclick="openForm()">Book</button>
+
+</div>
+
+<div class="doctor">
+
+<img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2">
+
+<h3>Dr Sarah Lee</h3>
+
+<p>Neurologist</p>
+
+<button class="btn" onclick="openForm()">Book</button>
+
+</div>
+
+<div class="doctor">
+
+<img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e">
+
+<h3>Dr Michael Brown</h3>
+
+<p>Orthopedic Surgeon</p>
+
+<button class="btn" onclick="openForm()">Book</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Patient Reviews</h2>
+
+<div class="review">Excellent doctors and medical facilities.</div>
+
+<div class="review">Very professional hospital environment.</div>
+
+<div class="review">Highly recommended healthcare center.</div>
+
+</section>
+
+<footer>
+
+<p>Medicare Hospital | 24/7 Emergency Care</p>
+
+</footer>
+
+<!-- APPOINTMENT FORM -->
+
+<div class="popup" id="formPopup">
+
+<div class="popup-content">
+
+<h3>Book Appointment</h3>
+
+<input placeholder="Name">
+<input placeholder="Phone">
+<input placeholder="Department">
+
+<button class="btn">Submit</button>
+<button onclick="closeForm()">Close</button>
+
+</div>
+
+</div>
+
+<!-- DASHBOARD -->
+
+<div class="dashboard" id="dashboard">
+
+<div class="dashboard-box">
+
+<h3>Patient Dashboard</h3>
+
+<p>Upcoming Appointment: Dr John - Cardiology</p>
+
+<p>Reports: Blood Test Ready</p>
+
+<p>Status: Healthy</p>
+
+<button onclick="closeDashboard()">Close</button>
+
+</div>
+
+</div>
+
+<div class="ambulance">
+
+🚑 Emergency
+
+</div>
+
+<script>
+
+function openForm(){
+document.getElementById("formPopup").style.display="flex";
+}
+
+function closeForm(){
+document.getElementById("formPopup").style.display="none";
+}
+
+function openDashboard(){
+document.getElementById("dashboard").style.display="flex";
+}
+
+function closeDashboard(){
+document.getElementById("dashboard").style.display="none";
+}
+
+</script>
+
+</body>
+
+</html>

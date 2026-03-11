@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumière | Luxury Dining Experience</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Lumière<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#popular">Menu</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="#booking" class="btn btn-outline">Book Table</a>
+                <a href="#order" class="btn btn-primary">Order Online</a>
+            </div>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1 class="glow-text">Taste the <span class="gradient-text">Extraordinary</span></h1>
+            <p>Experience culinary artistry where modern luxury meets timeless flavors.</p>
+            <div class="hero-btns">
+                <a href="#menu" class="btn btn-primary">View Menu</a>
+                <a href="#booking" class="btn btn-outline">Book Table</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Dishes -->
+    <section id="popular" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Popular <span class="gradient-text">Dishes</span></h2>
+            <div class="dish-grid">
+                <!-- Card 1 -->
+                <div class="dish-card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Burger">
+                        <div class="price">$24</div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Truffle Wagyu Burger</h3>
+                        <p>Premium wagyu beef, black truffle aioli, aged cheddar.</p>
+                        <button class="btn btn-sm">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="dish-card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Pasta">
+                        <div class="price">$32</div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Saffron Risotto</h3>
+                        <p>Arborio rice, wild mushrooms, saffron threads, parmesan.</p>
+                        <button class="btn btn-sm">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="dish-card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Steak">
+                        <div class="price">$45</div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Ribeye Steak</h3>
+                        <p>20oz dry-aged ribeye, garlic butter, rosemary potatoes.</p>
+                        <button class="btn btn-sm">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Menu Categories -->
+    <section id="menu" class="section-padding bg-darker">
+        <div class="container">
+            <h2 class="section-title">Our <span class="gradient-text">Menu</span></h2>
+            <div class="menu-categories">
+                <div class="category-card">
+                    <i class="fas fa-pizza-slice"></i>
+                    <h3>Pizza</h3>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-hamburger"></i>
+                    <h3>Burgers</h3>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-drumstick-bite"></i>
+                    <h3>Chicken</h3>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Veggie</h3>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-ice-cream"></i>
+                    <h3>Desserts</h3>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-cocktail"></i>
+                    <h3>Drinks</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Home Delivery Section -->
+    <section id="delivery" class="section-padding">
+        <div class="container">
+            <div class="delivery-box">
+                <div class="delivery-content">
+                    <h2>Fast Home Delivery <span class="gradient-text">Within 5 km</span></h2>
+                    <p>Enjoy our gourmet meals in the comfort of your home. Fast, hot, and fresh.</p>
+                    <div class="delivery-features">
+                        <div class="feature">
+                            <i class="fas fa-motorcycle"></i>
+                            <span>Fast Delivery</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-temperature-high"></i>
+                            <span>Hot & Fresh</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-wallet"></i>
+                            <span>Easy Payment</span>
+                        </div>
+                    </div>
+                    <a href="#order" class="btn btn-primary">Order for Home Delivery</a>
+                </div>
+                <div class="delivery-form">
+                    <h3>Quick Order Form</h3>
+                    <form>
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="tel" placeholder="Phone Number" required>
+                        <input type="text" placeholder="Address (Max 5km)" required>
+                        <textarea placeholder="Order Notes (Optional)"></textarea>
+                        <button type="submit" class="btn btn-glow">Submit Order</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section-padding bg-darker">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Interior"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Food"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Chef"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Dish"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Customer <span class="gradient-text">Reviews</span></h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Absolutely stunning atmosphere and the food was out of this world. A must-visit!"</p>
+                    <h4>- Sarah Jenkins</h4>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"The delivery was incredibly fast and the food arrived piping hot. Highly recommended."</p>
+                    <h4>- Michael Ross</h4>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★☆</div>
+                    <p>"Great service and beautiful presentation. The truffle burger is a must try."</p>
+                    <h4>- Emily Clark</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Table Booking Section -->
+    <section id="booking" class="section-padding bg-darker">
+        <div class="container">
+            <h2 class="section-title">Book a <span class="gradient-text">Table</span></h2>
+            <div class="booking-wrapper">
+                <form class="booking-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="date" required>
+                        <input type="time" required>
+                    </div>
+                    <div class="form-group">
+                        <select>
+                            <option>2 Guests</option>
+                            <option>3 Guests</option>
+                            <option>4 Guests</option>
+                            <option>5+ Guests</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Confirm Booking</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Contact -->
+    <section id="location" class="section-padding">
+        <div class="container">
+            <div class="location-grid">
+                <div class="location-info">
+                    <h2>Find Us</h2>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Luxury Avenue, New York, NY 10012</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> contact@lumiere.com</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937950147!2d-73.9873196845941!3d40.75889497932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <h2>Lumière<span>.</span></h2>
+                <p>Experience the art of fine dining.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="#hero">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#booking">Book Table</a>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <input type="email" placeholder="Enter your email">
+                <button
