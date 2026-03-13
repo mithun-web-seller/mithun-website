@@ -187,15 +187,13 @@ I create modern professional websites for businesses
 
 <h2 class="section-title">Contact Me</h2>
 
-<form name="contact" method="POST" data-netlify="true">
+<form id="contactForm">
 
-<input type="hidden" name="form-name" value="contact">
+<input type="text" id="name" placeholder="Your Name" required>
 
-<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" id="email" placeholder="Your Email" required>
 
-<input type="email" name="email" placeholder="Your Email" required>
-
-<textarea name="message" placeholder="Your Message"></textarea>
+<textarea id="message" placeholder="Your Message"></textarea>
 
 <button type="submit">Send Message</button>
 
@@ -219,6 +217,8 @@ I create modern professional websites for businesses
 
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
 <script>
 (function(){
 emailjs.init("aC6MgElT7njvJHjKGY");
@@ -232,8 +232,14 @@ emailjs.send("service_ypzk5re","template_qkp46zm",{
 name:document.getElementById("name").value,
 email:document.getElementById("email").value,
 message:document.getElementById("message").value
-}).then(function(){
-alert("Message Sent Successfully");
+}).then(function(response){
+
+alert("Message Sent Successfully!");
+
+}, function(error){
+
+alert("Failed to send message. Try again.");
+
 });
 
 });
