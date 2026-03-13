@@ -244,7 +244,9 @@ speed:3
 </script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script> -->
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 <script>
 
@@ -256,18 +258,20 @@ document.getElementById("contactForm").addEventListener("submit", function(e){
 
 e.preventDefault();
 
-emailjs.send("service_ypzk5re","template_qkp46zm",{
+const templateParams = {
+name: document.getElementById("name").value,
+email: document.getElementById("email").value,
+message: document.getElementById("message").value
+};
 
-name:document.getElementById("name").value,
-email:document.getElementById("email").value,
-message:document.getElementById("message").value
-
-}).then(function(){
+emailjs.send("service_ypzk5re","template_qkp46zm",templateParams)
+.then(function(response) {
 
 alert("Message Sent Successfully!");
 
-}).catch(function(){
+}, function(error) {
 
+console.log("FAILED...", error);
 alert("Failed to send message");
 
 });
@@ -275,6 +279,5 @@ alert("Failed to send message");
 });
 
 </script>
-
 </body>
 </html>
