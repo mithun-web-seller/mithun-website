@@ -217,5 +217,27 @@ I create modern professional websites for businesses
 
 <script src="script.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+emailjs.init("aC6MgElT7njvJHjKGY");
+})();
+
+document.getElementById("contactForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+emailjs.send("service_ypzk5re","template_qkp46zm",{
+name:document.getElementById("name").value,
+email:document.getElementById("email").value,
+message:document.getElementById("message").value
+}).then(function(){
+alert("Message Sent Successfully");
+});
+
+});
+</script>
+
 </body>
 </html>
